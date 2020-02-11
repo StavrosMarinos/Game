@@ -9,8 +9,8 @@ public class Game extends JFrame {
 
     public Game(String title) throws HeadlessException {
         super(title);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(fWidth,fHeight);
         setVisible(true);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 }

@@ -4,7 +4,6 @@ import Code.Ball;
 import Code.Main;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -13,12 +12,7 @@ public class AddBallButton extends JButton implements ActionListener {
 
     public AddBallButton(String text) {
         super(text);
-        setOpaque(false);
-        //setLocation(Game.fWidth/2,Game.fHeight/2);
         this.addActionListener(this);
-        this.setVisible(true);
-        //setBounds(30,200,40,30);
-        this.setSize(new Dimension(65, 30));
     }
 
     @Override

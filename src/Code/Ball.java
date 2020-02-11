@@ -8,15 +8,14 @@ import static Code.Utils.Utils.*;
 public class Ball {
     int x;
     int y;
-    int xVel;//velocity in the x axis
-    int yVel;//velocity in the y axis
+    int xVel;
+    int yVel;
     int width;
     int height;
-    int mass;// mass of the ball, proportional to the width and height
+    int mass;// mass of the ball, proportional to its dimensions
     Color color;
 
     public Ball(int xVel,int yVel){
-        //setOpaque(false);
         mass=randMass();
         width=mass;
         height=mass;
@@ -25,35 +24,14 @@ public class Ball {
         x=randCoordinateX(mass);
         y=randCoordinateY(mass);
         color=randColor();
-        //this.setBounds(0,0,700,700);
-        //setVisible(true);
-    }
 
-//    @Override
-//    public void paint(Graphics g) {
-//        super.paint(g);
-//        g.setColor(Color.green);
-//        g.fillOval(this.x,this.y,this.width,this.height);
-//        setVisible(true);
-//        repaint();//how does it work?
-//    }
+    }
 
     public void move(){
         x=x-xVel;
         y=y-yVel;
         checkBoundaries();
     }
-
-//    public void changeVelocity() {
-//        xVel = xVel - 1;
-//        if (xVel == 0) {
-//            xVel = 7;
-//        }
-//        yVel -= 1;
-//        if (yVel == 0) {
-//            yVel = 5;
-//        }
-//    }
 
     //check for the position of the ball, not to cross the boundaries of the frame
     private void checkBoundaries() {
