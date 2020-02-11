@@ -1,7 +1,9 @@
 package Code;
 
 import Code.Buttons.AddBallButton;
+import Code.Buttons.NewGameButton;
 import Code.Buttons.SpeedButton;
+import Code.Buttons.StartButton;
 import Code.Buttons.StopButton;
 
 import javax.swing.*;
@@ -18,11 +20,14 @@ public class Main {
         AddBallButton addBallButton=new AddBallButton("AddBall");
         SpeedButton speedButton=new SpeedButton("Speed");
         StopButton stopButton=new StopButton("Stop");
+        //NewGameButton newGameButton=new NewGameButton("NewGame");
+        StartButton startButton=new StartButton("Start");
 
         JPanel buttonPanel=new JPanel(new FlowLayout());
         buttonPanel.add(addBallButton);
         buttonPanel.add(speedButton);
         buttonPanel.add(stopButton);
+        buttonPanel.add(startButton);
 
         game=new Game("The Code.Game");
         container=game.getContentPane();
@@ -31,8 +36,11 @@ public class Main {
         drawBalls=new DrawBalls();
         container.add(drawBalls,BorderLayout.CENTER);
 
+            
             drawBalls.play();
-        game.dispatchEvent(new WindowEvent(game, WindowEvent.WINDOW_CLOSING));
+            
+            
+        //game.dispatchEvent(new WindowEvent(game, WindowEvent.WINDOW_CLOSING));
 
     }
 

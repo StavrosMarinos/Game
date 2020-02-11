@@ -16,6 +16,12 @@ public class StopButton extends JButton implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        Main.drawBalls.continueLoop=false;
+        // Main.drawBalls.continueLoop=false;
+        try {
+            Thread.currentThread().wait();
+        } catch (InterruptedException e1) {
+            // TODO Auto-generated catch block
+            e1.printStackTrace();
+        }
     }
 }

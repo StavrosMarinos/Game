@@ -7,18 +7,22 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JButton;
 
-public class NewGameButton extends JButton implements ActionListener {
+public class StartButton extends JButton implements ActionListener {
 
-    public NewGameButton(String text) {
+    public StartButton(String text) {
         super(text);
         this.addActionListener(this);
     }
 
     @Override
-    public void actionPerformed(ActionEvent event){
+    public void actionPerformed(ActionEvent event) {
+        
+            Thread.currentThread().notify();
+        
         //synchronized (Thread.currentThread()) {
-            Main.drawBalls.continueLoop=false;
+            //Main.drawBalls.continueLoop=false;
             // Main.drawBalls.set.clear();
             // Main.drawBalls =new DrawBalls();
             // Main.drawBalls.playAgain=true;
